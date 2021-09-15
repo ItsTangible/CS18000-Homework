@@ -7,8 +7,8 @@ import java.util.Scanner;
  *
  * Purdue University -- CS18000 -- Fall 2021 -- Homework 04 -- Challenge
  *
- * @author Purdue CS
- * @version August 23, 2021
+ * @author Ben Winther
+ * @version September 15, 2021
  */
 
 public class ToySeller {
