@@ -6,9 +6,9 @@ import java.util.Scanner;
  *
  * A program that allows you to control and manage a loan to
  *
- * @author your name, section number
+ * @author Ben Winther, section number
  *
- * @version date of completion
+ * @version 10/1/2021
  *
  */
 
@@ -59,46 +59,40 @@ public class LendingCalculator {
             do {
                 System.out.println(ongoingMenu);
                 int ongoingMenuAns = scan.nextInt();
-                switch(ongoingMenuAns) {
-                    case 0 -> {
-                        ongoing = false;
-                    }
-                    case 1 -> {
-                        System.out.println(durationMessage);
-                        duration = scan.nextInt();
-                        scan.nextLine();
-                        loan.setDuration(duration);
+                if (ongoingMenuAns == 0) {
+                    ongoing = false;
+                } else if (ongoingMenuAns == 1) {
+                    System.out.println(durationMessage);
+                    duration = scan.nextInt();
+                    scan.nextLine();
+                    loan.setDuration(duration);
 
-                        System.out.println(rateMessage);
-                        rate = scan.nextDouble();
-                        scan.nextLine();
-                        loan.setRate(rate);
+                    System.out.println(rateMessage);
+                    rate = scan.nextDouble();
+                    scan.nextLine();
+                    loan.setRate(rate);
 
-                        System.out.println(amountMessage);
-                        amount = scan.nextDouble();
-                        scan.nextLine();
-                        loan.setAmount(amount);
+                    System.out.println(amountMessage);
+                    amount = scan.nextDouble();
+                    scan.nextLine();
+                    loan.setAmount(amount);
 
-                        loan.calculateMonthlyPayment();
+                    loan.calculateMonthlyPayment();
 
-                        System.out.println(loan.toString());
+                    System.out.println(loan.toString());
+                } else if (ongoingMenuAns == 2){
+                    System.out.println(amortizationPrompt);
+                    System.out.println(amortizationMenu);
+                    int amortInput = scan.nextInt();
+                    if (amortInput == 1) {
+                        System.out.println("Total Interest: " + loan.calculateTotalInterest(true));
                     }
-                    case 2 -> {
-                        System.out.println(amortizationPrompt);
-                        System.out.println(amortizationMenu);
-                        int amortInput = scan.nextInt();
-                        if (amortInput == 1) {
-                            System.out.println("Total Interest: " + loan.calculateTotalInterest(true));
-                        }
-                        else {
-                            System.out.println("Total Interest: " + loan.calculateTotalInterest(false));
-                        }
+                    else {
+                        System.out.println("Total Interest: " + loan.calculateTotalInterest(false));
                     }
-                    default -> {
-                        System.out.println(errorMessage);
-                    }
+                } else {
+                    System.out.println(errorMessage);
                 }
-
             } while(ongoing);
         }
         System.out.println(exitMessage);

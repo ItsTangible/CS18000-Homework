@@ -55,8 +55,8 @@ public class Loan {
 
     // Methods
     public double calculateMonthlyPayment() {
-        monthlyPayment = twoDecimals(amount * (rate / 12)  * (Math.pow((1 + rate / 12),duration)) / (Math.pow((1 + rate / 12), duration) - 1 ));
-        return twoDecimals(monthlyPayment);
+        monthlyPayment = amount * (rate / 12)  * (Math.pow((1 + rate / 12),duration)) / (Math.pow((1 + rate / 12), duration) - 1 );
+        return monthlyPayment;
     }
 
     public double calculateTotalInterest(boolean output) {
@@ -66,32 +66,27 @@ public class Loan {
         double interest = 0;
         double totalInterest = 0;
         while (paymentNumber <= duration) {
-            interest = twoDecimals((currentAmount/12)*rate);
-            principle = twoDecimals(monthlyPayment - interest);
-            currentAmount = twoDecimals(currentAmount - principle);
+            interest = (currentAmount/12)*rate;
+            principle = monthlyPayment - interest;
+            currentAmount = currentAmount - principle;
             if (output) {
                 amorTable(paymentNumber, principle, interest, currentAmount);
             }
             totalInterest += interest;
             paymentNumber++;
         }
-        return totalInterest;
+        return Double.parseDouble(String.format("%.2f", totalInterest));
     }
 
     public void amorTable(int number, double principle, double interest, double remaining) {
-        System.out.print("Payment: " + number);
-        System.out.print(" - Principle: " + principle);
-        System.out.print(" - Interest: " + interest);
-        System.out.print(" - Remaining: " + remaining + "\n");
-    }
-
-    public double twoDecimals(double input) {
-        double hold = Math.round(input*100.00);
-        return hold/100.00;
+        System.out.printf("Payment: %d", number);
+        System.out.printf(" - Principle: %.2f", principle);
+        System.out.printf(" - Interest: %.2f", interest);
+        System.out.printf(" - Remaining: %.2f%n", remaining);
     }
 
     public String toString() {
-        return "Amount: " + amount + " - Rate: " + rate + " - Duration: " + duration + " - Payment: " + monthlyPayment;
+        return "Amount: " + amount + " - Rate: " + rate + " - Duration: " + duration + " - Payment: " + String.format("%.2f", monthlyPayment);
     }
 
 }
