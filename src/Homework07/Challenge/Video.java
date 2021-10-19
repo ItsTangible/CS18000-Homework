@@ -47,7 +47,7 @@ public class Video {
     }
 
     // Returns the duration of the video as a String in the format "mm:ss"
-    public String duration() {
+    public String getDuration() {
         int minutes = this.duration / 60;
         int seconds = this.duration % 60;
         return "" + minutes + ":" + seconds;
@@ -73,7 +73,7 @@ public class Video {
     public String toString() {
         String channelName = channel.getChannelName();
         return "Video[" + videoName + ", "
-                + channelName + ", " + duration()
+                + channelName + ", " + getDuration()
                 + ", " + numViews + "]";
     }
 }

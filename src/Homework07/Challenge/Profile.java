@@ -93,6 +93,7 @@ public class Profile {
         // Adds channel if both above aren't true
         subscribed[numSubscribed] = channel;
         numSubscribed++;
+        channel.addChannelSubscriber();
         return true;
     }
 
