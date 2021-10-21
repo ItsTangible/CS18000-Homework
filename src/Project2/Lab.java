@@ -123,7 +123,7 @@ public class Lab {
         else afternoonString = afternoon.toString();
 
         return "Lab{Capacity - " + capacity + ", Location - "
-                + location + "Morning: " + morningString
+                + location + ", Morning: " + morningString
                 + ", Afternoon: " + afternoonString + '}';
     }
 }
