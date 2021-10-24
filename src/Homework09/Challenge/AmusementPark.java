@@ -1,5 +1,7 @@
 package Homework09.Challenge;
 
+import java.util.ArrayList;
+
 public class AmusementPark implements Park {
 
     // The name of the amusement park
@@ -12,7 +14,7 @@ public class AmusementPark implements Park {
     private double land;
 
     // The list of rides in the amusement park
-    private Ride[] rides;
+    private ArrayList<Ride> rides;
 
     // Whether or not the amusement park has an indoor component
     private boolean indoor;
@@ -34,7 +36,7 @@ public class AmusementPark implements Park {
      * specified by the input parameters
      */
     public AmusementPark(String name, double admissionCost, double land,
-                         Ride[] rides, boolean indoor, boolean outdoor,
+                         ArrayList<Ride> rides, boolean indoor, boolean outdoor,
                          boolean arcade, boolean bowling, boolean[] seasons) {
         this.name = name;
         this.admissionCost = admissionCost;
@@ -55,7 +57,11 @@ public class AmusementPark implements Park {
      */
     @Override
     public void addRide(Ride ride) {
+        try {
 
+        } catch(Exception WrongRideException) {
+
+        }
     }
 
     /*
@@ -65,7 +71,15 @@ public class AmusementPark implements Park {
      */
     @Override
     public void close() {
-
+        this.name = "";
+        this.admissionCost = 0;
+        this.land = 0;
+        this.rides = null;
+        this.seasons = null;
+        this.indoor = false;
+        this.outdoor = false;
+        this.arcade = false;
+        this.bowling = false;
     }
 
     // Enlarges the amusement park by adding a certain amount of land to the park
@@ -78,25 +92,25 @@ public class AmusementPark implements Park {
     // Returns the admission cost of the amusement park
     @Override
     public double getAdmissionCost() {
-        return 0;
+        return admissionCost;
     }
 
     // Returns the amount of land the amusement park covers in acres
     @Override
     public double getLand() {
-        return 0;
+        return land;
     }
 
     // Returns the name of the amusement park
     @Override
     public String getName() {
-        return null;
+        return this.name;
     }
 
     // Returns the list of rides in the amusement park
     @Override
-    public Ride[] getRides() {
-        return new Ride[0];
+    public ArrayList<Ride> getRides() {
+        return this.rides;
     }
 
     /*
@@ -105,29 +119,29 @@ public class AmusementPark implements Park {
      */
     @Override
     public boolean[] getSeasons() {
-        return new boolean[0];
+        return this.seasons;
     }
 
     // Returns whether or not the amusement park has an arcade
     public boolean isArcade() {
-        return false;
+        return this.arcade;
     }
 
     //Returns whether or not the amusement park has bowling
     public boolean isBowling() {
-        return false;
+        return this.bowling;
     }
 
     // Returns whether or not the amusement park has an indoor component
     @Override
     public boolean isIndoor() {
-        return false;
+        return this.indoor;
     }
 
     // Returns whether or not the amusement park has an outdoor component
     @Override
     public boolean isOutdoor() {
-        return false;
+        return this.outdoor;
     }
 
     /*
@@ -149,28 +163,28 @@ public class AmusementPark implements Park {
     // Sets the admission cost instance variable to the value given as a parameter
     @Override
     public void setAdmissionCost(double admissionCost) {
-
+        this.admissionCost = admissionCost;
     }
 
     // Sets the arcade instance variable to the arcade boolean given as a parameter
     public void setArcade(boolean arcade) {
-
+        this.arcade = arcade;
     }
 
     // Sets the bowling instance variable to the bowling boolean given as a parameter
     public void setBowling(boolean bowling) {
-
+        this.bowling = bowling;
     }
 
     // Sets the name instance variable to the String given as a parameter
     @Override
     public void setName(String name) {
-
+        this.name = name;
     }
 
     // Sets the seasons instance variable to the boolean array given as a parameter
     @Override
     public void setSeasons(boolean[] seasons) {
-
+        this.seasons = seasons;
     }
 }

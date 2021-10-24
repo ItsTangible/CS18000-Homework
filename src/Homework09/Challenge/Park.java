@@ -1,5 +1,7 @@
 package Homework09.Challenge;
 
+import java.util.ArrayList;
+
 public interface Park {
     void addRide(Ride ride);
     void close();
@@ -7,7 +9,7 @@ public interface Park {
     double getAdmissionCost();
     double getLand();
     String getName();
-    Ride[] getRides();
+    ArrayList<Ride> getRides();
     boolean[] getSeasons();
     boolean isIndoor();
     boolean isOutdoor();
