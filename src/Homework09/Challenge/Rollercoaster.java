@@ -33,7 +33,7 @@ public class Rollercoaster extends Ride {
      * the specified object is an instance of Rollercoaster and the name, color,
      * minHeight, maxRiders, and simulated value of the given rollercoaster are
      * equal to the name, color, minHeight, maxRiders, and simulated value of
-     * this rollercoaster.
+     * this rollercoaster
      */
     @Override
     public boolean equals(Object o) {

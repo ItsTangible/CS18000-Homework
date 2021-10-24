@@ -3,9 +3,9 @@ package Homework09.Challenge;
 import java.util.ArrayList;
 
 public interface Park {
-    void addRide(Ride ride);
+    void addRide(Ride ride) throws WrongRideException;
     void close();
-    void enlarge(double addedLand, double maxLand, boolean addedIndoor, boolean addedOutdoor);
+    void enlarge(double addedLand, double maxLand, boolean addedIndoor, boolean addedOutdoor) throws SpaceFullException;
     double getAdmissionCost();
     double getLand();
     String getName();

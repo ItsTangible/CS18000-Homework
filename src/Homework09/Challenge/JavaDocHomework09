@@ -6,12 +6,12 @@ Interfaces:
 Park - done
 
 Classes:
-~AmusementPark(implements Park)
-WaterPark(implements Park)
+AmusementPark(implements Park) - done
+WaterPark(implements Park) - done
 Ride - done
-    ~Rollercoaster
+    Rollercoaster - done
     Waterslide
 
 Exceptions:
-~WrongRideException
-~SpaceFullException
+WrongRideException - done
+SpaceFullException - done

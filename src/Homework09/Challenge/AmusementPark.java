@@ -56,11 +56,11 @@ public class AmusementPark implements Park {
      * if the ride to be added is not a rollercoaster
      */
     @Override
-    public void addRide(Ride ride) {
-        try {
-
-        } catch(Exception WrongRideException) {
-
+    public void addRide(Ride ride) throws WrongRideException {
+        if (!(ride instanceof Rollercoaster)) {
+            throw new WrongRideException("An amusement park can only have rollercoaster rides");
+        } else {
+            rides.add(ride);
         }
     }
 
@@ -85,8 +85,14 @@ public class AmusementPark implements Park {
     // Enlarges the amusement park by adding a certain amount of land to the park
     @Override
     public void enlarge(double addedLand, double maxLand, boolean addedIndoor,
-                        boolean addedOutdoor) {
-
+                        boolean addedOutdoor) throws SpaceFullException {
+        if (land + addedLand > maxLand) {
+            throw new SpaceFullException("There is no more land to use for this park");
+        } else {
+            this.land += addedLand;
+            if (!this.indoor) this.indoor = addedIndoor;
+            if (!this.outdoor) this.outdoor = addedOutdoor;
+        }
     }
 
     // Returns the admission cost of the amusement park
@@ -151,13 +157,14 @@ public class AmusementPark implements Park {
     public void modifyRide(Ride ride, String newName, String newColor,
                            int newMinHeight, int newMaxRiders,
                            boolean newSimulated) {
-
+        rides.set(rides.indexOf(ride), new Rollercoaster(newName, newColor,
+                newMinHeight, newMaxRiders, newSimulated));
     }
 
     // Removes the ride given as an input parameter from the list of rides
     @Override
     public void removeRide(Ride ride) {
-
+        rides.remove(ride);
     }
 
     // Sets the admission cost instance variable to the value given as a parameter
