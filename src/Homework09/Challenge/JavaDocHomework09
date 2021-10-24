@@ -1,17 +1,3 @@
 
 This is the JavaDoc containing all the classes/interfaces for homework 09:
 https://labs.vocareum.com/web/1584286/581836.0/ASNLIB/public/docs/Javadoc/allclasses-index.html
-
-Interfaces:
-Park - done
-
-Classes:
-AmusementPark(implements Park) - done
-WaterPark(implements Park) - done
-Ride - done
-    Rollercoaster - done
-    Waterslide
-
-Exceptions:
-WrongRideException - done
-SpaceFullException - done
