@@ -1,5 +1,16 @@
 package Homework09.Challenge;
-
+/**
+ * Ride Class
+ *
+ * A class representing a ride in a park.
+ * Each ride has its own name, color, minimum
+ * height, and maximum riders
+ *
+ * @author Ben Winther
+ *
+ * @version 10/24/2021
+ *
+ */
 public class Ride {
 
     // The name of the ride
@@ -107,6 +118,6 @@ public class Ride {
         return "Name: " + name + "\n"
                 + "Color: " + color + "\n"
                 + "MinHeight: " + minHeight + " inches\n"
-                + "MaxRiders:" + maxRiders;
+                + "MaxRiders: " + maxRiders;
     }
 }

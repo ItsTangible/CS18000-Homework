@@ -1,5 +1,17 @@
 package Homework09.Challenge;
-
+/**
+ * Water Slide Class
+ *
+ * A class representing an Water slide.
+ * Water slides extend rides but are the only rides in water parks.
+ * They contain all the variables as rides aswell as the splash
+ * depth of the water slide.
+ *
+ * @author Ben Winther
+ *
+ * @version 10/24/2021
+ *
+ */
 public class Waterslide extends Ride {
 
     // The splash depth of the waterslide in feet
@@ -54,7 +66,7 @@ public class Waterslide extends Ride {
         return "Name: " + this.getName() + "\n"
                 + "Color: " + this.getColor() + "\n"
                 + "MinHeight: " + this.getMinHeight() + " inches\n"
-                + "MaxRiders:" + this.getMaxRiders() + "\n"
+                + "MaxRiders: " + this.getMaxRiders() + "\n"
                 + "SplashDepth: " + getSplashDepth();
     }
 }

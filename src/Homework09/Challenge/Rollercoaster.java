@@ -1,7 +1,17 @@
 package Homework09.Challenge;
-
-import java.util.Objects;
-
+/**
+ * Water Slide Class
+ *
+ * A class representing a rollercoaster.
+ * Rollercoasters extend rides but are the only rides in amusement parks.
+ * They contain all the variables as rides aswell as the whether the ride
+ * is simulated or not.
+ *
+ * @author Ben Winther
+ *
+ * @version 10/24/2021
+ *
+ */
 public class Rollercoaster extends Ride {
 
     // Whether or not the ride is a simulation
@@ -13,7 +23,7 @@ public class Rollercoaster extends Ride {
      */
     public Rollercoaster(String name, String color, int minHeight,
                          int maxRiders, boolean simulated) {
-        super(name, color,minHeight,maxRiders);
+        super(name, color, minHeight, maxRiders);
         this.simulated = simulated;
     }
 
@@ -59,7 +69,7 @@ public class Rollercoaster extends Ride {
         return "Name: " + this.getName() + "\n"
                 + "Color: " + this.getColor() + "\n"
                 + "MinHeight: " + this.getMinHeight() + " inches\n"
-                + "MaxRiders:" + this.getMaxRiders() + "\n"
+                + "MaxRiders: " + this.getMaxRiders() + "\n"
                 + "Simulated: " + isSimulated();
     }
 }

@@ -1,7 +1,19 @@
 package Homework09.Challenge;
 
 import java.util.ArrayList;
-
+/**
+ * Amusement Park Class
+ *
+ * A class representing an Amusement Park.
+ * Each amusement park has a name, admission cost, amount of land, and a list of
+ * rides. The class also contains methods for managing all these variables and
+ * remembering if the park contains indoor and outdoor land, an arcade, and bowling.
+ *
+ * @author Ben Winther
+ *
+ * @version 10/24/2021
+ *
+ */
 public class AmusementPark implements Park {
 
     // The name of the amusement park

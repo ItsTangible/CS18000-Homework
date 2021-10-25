@@ -1,7 +1,19 @@
 package Homework09.Challenge;
 
 import java.util.ArrayList;
-
+/**
+ * Water Park Class
+ *
+ * A class representing an Water Park.
+ * Each water park has a name, admission cost, amount of land, and a list of rides.
+ * The class also contains methods for managing all these variables and remembering
+ * if the park contains indoor and outdoor land, a lazy river, and a wave pool.
+ *
+ * @author Ben Winther
+ *
+ * @version 10/24/2021
+ *
+ */
 public class WaterPark implements Park {
 
     // The name of the water park
@@ -174,13 +186,13 @@ public class WaterPark implements Park {
     }
 
     // Sets the lazyRiver instance variable to the lazyRiver boolean given as a parameter
-    public void setArcade(boolean lazyRiver) {
-        this.lazyRiver = lazyRiver;
+    public void setLazyRiver(boolean newLazyRiver) {
+        this.lazyRiver = newLazyRiver;
     }
 
     // Sets the lazyRiver instance variable to the wavePool boolean given as a parameter
-    public void setBowling(boolean wavePool) {
-        this.wavePool = wavePool;
+    public void setWavePool(boolean newWavePool) {
+        this.wavePool = newWavePool;
     }
 
     // Sets the name instance variable to the String given as a parameter

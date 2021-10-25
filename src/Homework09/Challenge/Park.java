@@ -1,5 +1,14 @@
 package Homework09.Challenge;
-
+/**
+ * Park Interface
+ *
+ * An interface holding methods for a Park.
+ *
+ * @author Ben Winther
+ *
+ * @version 10/24/2021
+ *
+ */
 import java.util.ArrayList;
 
 public interface Park {
