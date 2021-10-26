@@ -1,7 +1,6 @@
 package Project1;
 
 import java.util.Scanner;
-
 /**
  * A simple BaseballScores class
  *
