@@ -21,4 +21,8 @@ public class MazeNavigator extends Thread {
         this.playerNumber = playerNumber;
         this.filename = filename;
     }
+
+    public void run() {
+
+    }
 }

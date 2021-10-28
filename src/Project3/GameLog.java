@@ -49,6 +49,7 @@ public class GameLog {
         this.boardPatternTwo = boardPatternTwo;
     }
 
+    // Returns the String representation of this Session.
     @Override
     public String toString() {
         return "Battleship Game Log:\n" +
