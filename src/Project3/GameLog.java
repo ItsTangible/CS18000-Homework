@@ -2,10 +2,10 @@ package Project3;
 /**
  * Game Log Class
  *
+ * Creates a Log of a Game with a overridden toString
  *
- *
- * @author Purdue CS
- * @version 08/23/2021
+ * @author Benjamin Winther
+ * @version 10/31/2021
  */
 public class GameLog {
 
@@ -41,7 +41,7 @@ public class GameLog {
      * respective parameters
      */
     public GameLog(int winningPlayer, int losingPlayerHits, int numTurns,
-                   String boardPatternOne, String boardPatternTwo){
+                   String boardPatternOne, String boardPatternTwo) {
         this.winningPlayer = winningPlayer;
         this.losingPlayerHits = losingPlayerHits;
         this.numTurns = numTurns;
@@ -52,9 +52,12 @@ public class GameLog {
     // Returns the String representation of this Session.
     @Override
     public String toString() {
+        String hitRatio = "";
+        if (winningPlayer == 1) hitRatio = "17 - " + losingPlayerHits;
+        else hitRatio = losingPlayerHits + " - 17";
         return "Battleship Game Log:\n" +
-                "Winning Player: " + winningPlayer + "\n" +
-                "Hits: " + losingPlayerHits + "\n" +
+                "Winning Player: Player " + winningPlayer + "\n" +
+                "Hits: " + hitRatio + "\n" +
                 "Number of Turns To Win: " + numTurns + "\n" +
                 "Player 1 Board Pattern: " + boardPatternOne + "\n" +
                 "Player 2 Board Pattern: " + boardPatternTwo;

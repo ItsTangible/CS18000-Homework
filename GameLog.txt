@@ -1,0 +1,6 @@
+Battleship Game Log:
+Winning Player: Player 1
+Hits: 17 - 13
+Number of Turns To Win: 29
+Player 1 Board Pattern: Middle Heavy
+Player 2 Board Pattern: Top Heavy
